@@ -39,6 +39,21 @@ Extensions icon for more features
 - no user agent change¿?
 - no sever daemon 
 
+== features ==
+- bruteforcing folders, files, params names, param values on get/post.
+- default wordlists or load worlist
+- cookie editor
+- notes
+- log
+- visual crawl
+- visual bruteforce (experimental)
+- clever params auditor expert system
+- request interceptor
+- base64 and url encoding/decoding
+- danger bytes, all encoded bytes
+- portscan
+- build request
+
 
 == components ==
 
