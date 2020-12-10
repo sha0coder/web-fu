@@ -2,6 +2,7 @@
 The web hacking chrome extension
 
 == license == 
+
 GPL v3
 
 
@@ -20,8 +21,10 @@ otro			select attack
 - Integrated
 - Speed
 - No copy paste get/post/cookies/ua/headers
-- Proxy
-- urllog antes de que salga la peticion
+- no proxy needed
+- integrated in chrome
+- ssl friendly
+- urllog logs before sending the request
 - user-event-hooks
 
 
