@@ -33,11 +33,10 @@ Extensions icon for more features
 - ssl friendly
 - urllog logs before sending the request
 - user-event-hooks
-
+- no sever daemon 
 
 == cons ==
 - no user agent change¿?
-- no sever daemon 
 
 == features ==
 - bruteforcing folders, files, params names, param values on get/post.
