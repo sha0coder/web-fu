@@ -1,0 +1,47 @@
+{
+	"name": "Web-Fu",
+	"version": "1.6",
+	"description": "Security audit tool",
+	"manifest_version": 2,
+	"minimum_chrome_version": "6",
+
+
+	"browser_action": {
+		"default_icon": "img/nuke_128.png",
+		"default_title": "Web-Fu"
+	},
+		
+	"background": {
+    	"persistent": true,
+    	"scripts": ["js/queue.js","js/storage.js","js/wls.js","js/comm.js","js/AttackPlan.js","js/attackAPI.js","js/base64.js","js/attacks/formBrute.js","js/menu.js"]
+  	},
+
+  	"content_scripts": [{
+  		"matches": ["http://*/*","https://*/*"],
+  		"js": ["js/menuHook.js","js/attacks/clicker.js"]
+  	}],
+
+	"icons": {
+		"128": "img/nuke_128.png",
+		"16": "img/nuke_16.png",
+		"32": "img/nuke_32.png",
+		"48": "img/nuke_48.png"
+	},
+	
+	
+	"web_accessible_resources": [
+		"img/nuke_48.png"
+	],
+
+	"permissions": [
+		"*://*/*",
+		"contextMenus",
+		"tabs",
+		"notifications",
+		"background",
+		"webRequest",
+		"webRequestBlocking",
+		"cookies"
+	]
+
+}

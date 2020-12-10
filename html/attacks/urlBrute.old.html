@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Web-Fu UrlBrute2</title>
+		<link href="/html/theme.css" rel="stylesheet" type="text/css">
+		<link rel="icon" type="image/png" href="chrome://resources/img/nuke_128.png">
+	</head>
+
+	<body>
+		<table><tr>
+			<td><img src='/img/nuke_128.png'></td><td><h1>URL Brute</h1></td>
+		</tr></table>
+		<br>
+		Target:<br><input type=text id='txtUrl' class=urlText title='All the ## will be replaced by each word of the wordlist'><br>
+		<input type=button id='btnStart' value='  Start  ' >
+		<input type=button id='btnFalsePositive' value='False positive reductor' >
+
+		<div id='divHeader'>
+		</div>
+
+		<br>
+		<table id='tblData'>
+		</table>
+
+		<div id='divStats'>
+		</div>
+
+		<script src="/js/colors.js"></script>
+		<script src="/js/o.js"></script>
+		<script src="/js/out.js"></script>
+		<script src="/js/async.js"></script>
+		<script src="/js/gauss.js"></script>
+		<script src="/js/attacks/http.js"></script>
+		<script src="/js/attacks/engine.js"></script>
+		<script src="/js/attacks/urlBrute.js"></script>
+	</body>
+
+</html>

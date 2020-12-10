@@ -1,6 +1,3 @@
-# web-fu
-The web hacking chrome extension
-
 == license == 
 GPL v3
 
@@ -46,4 +43,3 @@ Background -+--> menu.js        |                           |
                        |
                        V
                    WORDLISTS
-

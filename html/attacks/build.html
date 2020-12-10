@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <title>Web-Fu Builder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="icon" type="image/png" href="/img/nuke_128.png">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+  </head>
+  
+  <body>
+
+      <div class="row main-features">
+        <div class="span9">
+          <div class="well long">
+              <span class="label">Url:</span>
+              <br>
+              <input type="text"  class="input-medium input-block-level medium" id="txtUrl">
+              <br>
+              <div id="divPost">
+              <span class="label" id='lblPost'>Post:</span>
+              <br>
+              <input type="text"  class="input-medium input-block-level medium" id="txtPost">
+              </div>
+              
+            <span class="label">Headers:</span><br>
+            <input type="text"  class="input-medium input-block-level small" id="txtHdrName">:
+            <input type="text"  class="input-medium input-block-level small" id="txtHdrValue" title="use [NULL] to remove a header">
+            <br>
+            Number of requests:
+            <input type="text" value="1" class="input-medium input-block-level small" id="txtNum">
+            <br>
+
+            <td><button class="btn pull-left btn-primary" href="#" id="btnAddHdr">Add Header</button></td>
+            <td><button class="btn pull-left btn-primary" href="#" id="btnClear">Clear</button></td>
+            <td><button class="btn pull-left btn-primary" href="#" id="btnSend">Send</button></td>
+            <br>
+            <br>
+            <div id='divResp' style="position:relative">  <!-- tras cargar la wordlist, se pinta aqui el numero de palabras-->
+            </div>
+            <br>
+         
+          </div>
+        </div>
+
+         <div id='divBody'>  <!-- al finalizar se pinta aqui la velocidad de ataque -->
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/o.js"></script>
+    <script src="/js/attacks/build.js"></script>
+
+    
+    </body>
+    </html>    

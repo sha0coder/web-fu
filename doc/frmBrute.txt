@@ -1,0 +1,93 @@
+On a non-refresh form:
+
+
+Background              ContentScript
+
+[frmBrute]		[clicker]
+
+ignored <-------ready------ sendReady() (from other tabs)
+
+start() -------enable-----> 
+
+        <-------ready------ sendReady()
+
+walk() --------autoclick---> emulate()
+walk() --------autoclick---> emulate()
+walk() --------autoclick---> emulate()
+walk() --------autoclick---> emulate()
+walk() --------autoclick---> emulate()
+
+finish()<--------cracked---- 
+
+
+
+
+On a refresh form:
+
+Background                ContentScript
+
+[frmBrute]                [clicker]
+
+start() -------activate----->
+
+        <-------ready------ sendReady()
+
+walk() --------autoclick---> emulate()
+
+       <-------ready------ sendReady()  (when the page is reloaded, a sendReady() is sent)
+
+walk() --------autoclick---> emulate()
+
+       <-------ready------ sendReady()
+
+walk() --------autoclick---> emulate()
+
+       <-------ready------ sendReady()
+
+walk() --------autoclick---> emulate()
+
+        <-------ready------ sendReady()
+
+walk() --------autoclick---> emulate()
+
+finish()  <--------cracked---- 
+
+
+
+===========================================================
+[Background] 						[ContentScript]
+
+fromBrute		               	   	clicker
+
+enableClicker() ---------------> tryEnableClicker()   (injected)
+                                        |
+                                        V
+                                     enable()
+                                        | 
+                                        V 
+handle() 'clickerReady' <----------- sendReady()
+   |
+   V
+fingerprint()
+   |
+   V
+ walk() ----------------------------> comm() 'autoclick'
+                                        |
+                                        V
+                                     emulate()
+                                        | 
+                                        V
+                                     realClick()
+                                        |              
+                                        |-------------+ if formtype = submit -> communication loss
+                                        V             |
+handle() 'clickerReady' <----------- sendReady()      |
+ ...                                    ^             |
+                                        |             |
+                                      enable()  <-----+
+
+
+
+
+
+===========================================================

@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html>
+  
+  <head>
+    <title>Web-Fu Url Analyzer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="icon" type="image/png" href="/img/nuke_128.png">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+  </head>
+  
+  <body>
+
+      <div class="row main-features">
+        <div class="span9">
+          <div class="well long">
+              <span class="label">Url:</span>
+              <br>
+              <input type="text"  class="input-medium input-block-level medium" id="txtUrl" title='the ## symbol on this url, will be replaced by each word of the wordlist'>
+              <br>
+              <div id="divPost">
+              <span class="label" id='lblPost'>Post:</span>
+              <br>
+              <input type="text"  class="input-medium input-block-level medium" id="txtPost" title='the ## symbol on this post data, will be replaced by each word of the wordlist'>
+              </div>
+              <div id='divFile'>
+              </div>
+            <br>
+            <br>
+          </div>
+        </div>       
+      </div>
+    </div>
+    <div id='divStats'>  <!-- al finalizar se pinta aqui la velocidad de ataque -->
+    </div>
+
+
+    <canvas id="myCanvas" width="900" height="150"></canvas>
+   
+    <script src="/js/progressbar.js"></script>
+    <script src="/js/colors.js"></script>
+    <script src="/js/o.js"></script>
+    <script src="/js/async.js"></script>
+    <script src="/js/gauss.js"></script>
+    <script src="/js/attacks/http.js"></script>
+    <script src="/js/attacks/engine.js"></script>
+    <script src="/js/attacks/urlAnalyze.js"></script>
+
+    
+    </body>
+    </html>    

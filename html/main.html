@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <title>Web-Fu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="/img/nuke_128.png">
+  </head>
+  
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Web-Fu</a>
+          <div class="navbar-content">
+            <ul class="nav">
+              <li id="liHome">
+                <a href="#">Home</a>
+              </li>
+              <li id="liLogs">
+                <a href="#">Logs</a>
+              </li>
+              <li id="liLogger">
+                <a href="#">Logger</a>
+              </li>
+              <li id="liWordlists">
+                <a href="#">Wordlists</a>
+              </li>
+              <li id="liSearch">
+                <a href="#">Search</a>
+              </li>
+              <li id="liSettings">
+                <a href="#">Settings</a>
+              </li>
+              <li id="liAbout">
+                <a href="#">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- HOME -->
+      <div class="hero-unit hidden-phone" id="divHome">
+        <h1>Welcome to Web-Fu</h1>
+        <p>New way to perform pentests from your browser to websites</p>
+        <p>Current version: 1.5</p>
+        <p>Next steps: improving look & feel</p>
+        <p align=center><img src="../img/nuke_128.png"></p>
+      </div>
+
+
+
+      <!-- LOGS -->
+      <div class="row main-features" id="divLogs">
+        <div class="span9">
+          <div class="well">
+            <h1>Logs</h1>
+            <p>Attack timming</p>
+            <p>
+              <textarea id="txtLogs" style="width:650px; height:300px" readonly></textarea><br>
+
+              <a class="btn btn-primary btn-mini" href="#" id="btnSave">Export<br></a>
+              <a class="btn btn-primary btn-mini" href="#" id="btnDelete">Clear<br></a> 
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- LOGGER -->
+      <div class="row main-features" id="divLogger">
+        <div class="span9">
+          <div class="well">
+            <h1>Logger</h1>
+            <p>dynamic urls and post requests</p>
+            <p>
+              <div id="divLoggerPannel" class="container">
+              </div><br>
+              <a class="btn btn-primary btn-mini" href="#" id="btnStart">Start</a>
+              <a class="btn btn-primary btn-mini" href="#" id="btnStop">Stop</a>               
+              <a class="btn btn-primary btn-mini" href="#" id="btnAudit">Audit</a>
+              <a class="btn btn-primary btn-mini" href="#" id="btnClear">Clear</a> 
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- WORDLISTS -->
+      <div class="row main-features" id="divWordlists">
+        <div class="span9">
+          <div class="well">
+            <h1>Wordlists</h1>
+            <h3>
+              Default wordlists and user wordlists
+            </h3>
+            <table>
+              <tr>
+                <td>
+                  <textarea id="txtDefaultWordlists" rows="20" cols="20" title="default wordlists" readonly></textarea>
+                </td>
+                <td>
+                  <table>
+                    <tr>
+                      <td>
+                        <textarea id="txtUserWordlists" rows="15" cols="20" title="User wordlists" readonly></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Add Wordlist:
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" id="txtAddWordlist" title="ej: /tmp/myWordlist">
+			<!-- <input type="file" id="files" name="files[]"ass="btn btn-primary btn-mini"   multiple />-->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a class="btn btn-primary btn-mini" href="#" id="btnAddWordlist">Add a wordlist
+                        <a class="btn btn-primary btn-mini" href="#" id="btnDeleteWordlists">Delete wordslits</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>  
+          </div>
+        </div>
+      </div>
+
+
+      <!-- EXPLOIT SEARCH -->
+      <div class="row main-features" id="divSearch">
+        <div class="span9">
+          <div class="well">
+            <h1>Exploit Search</h1>
+            <p></p>
+              Search Exploit: <input type="text" id='txtExploitSearch' value="" style="width:600px">
+              <a class="btn btn-primary btn-mini" href="#" id="btnExploitSearch">Search</a>
+
+
+              <form id='doPost' method='post' target='exploitSearchWindow' action=''>
+                <input type='hidden' name='' id='postData' value=''>
+              </form>
+
+          </div>
+        </div>
+      </div>
+
+
+     
+      <!-- SETTINGS -->
+      <div class="row main-features" id="divSettings">
+        <div class="span9">
+          <div class="well">
+            <h1>Web-Fu Settings</h1>
+            <p></p>
+            <label class="checkbox" for="checkbox">
+              <input type="checkbox" value="true" id="cbScroll"> Auto scrolling down.
+              <br>
+            </label>
+		RFI Shell: <input type="text" id="txtRFI" value="" style="width:600px">
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- ABOUT -->
+       <div class="row main-features" id="divAbout">
+        <div class="span9">
+          <div class="well">
+            <h1>About</h1>
+            Design and Implementation:
+            <h3><a href="https://twitter.com/sha0coder">@sha0coder</a></h3>
+            Theme:
+            <h3><a href="https://twitter.com/groove">@groove</a></h3>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!--
+      <br>
+      <br>
+      <div class="row main-features">
+        <div class="span9">
+          <div class="well pull-left">
+            <span class="label">Visual form bruteforce timeout:</span>
+            <br>
+            <div class="input-prepend input-append">
+              <br>
+              <span class="add-on">$</span>
+              <input type="text" class="input-medium">
+              <span class="add-on">.00</span>
+              <br>
+              <br>
+              <span class="label">Wordlists:</span>
+            </div>
+            <div class="container-fluid"></div>
+            <br>
+            <button class="btn pull-left btn-primary btn-mini" href="#">Save Output
+              <br> 
+            </button>
+            <button class="btn pull-left btn-primary btn-mini" href="#">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row main-features">
+        <div class="span9">
+          <div class="well">
+            <div class="container-fluid"></div>
+            <br>
+            <button class="btn pull-left btn-primary btn-mini" href="#">Save</button>
+            <button class="btn pull-left btn-primary btn-mini" href="#">Reload</button>
+            <button class="btn pull-left btn-primary btn-mini" href="#">Close</button>
+            <br>
+            <br>
+            <div class="row main-features"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row main-features">
+        <div class="span9">
+          <div class="well">
+            <span class="label">Target:</span>
+            <br>
+            <input type="text" class="input-medium input-block-level">
+            <br>
+            <div class="row main-features"></div>
+            <button class="btn pull-left btn-primary btn-mini" href="#">Start</button>
+            <br>
+            <br>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Results</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>url-1</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>url-2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <b>Alertas</b>
+    </div>
+    <li>
+      <a href="#">Page</a> 
+    </li>
+    <label class="radio" for="radio">
+      <input type="radio" value="true" id="radio" name="radio"> Radio buttons are awesome!</label>
+    <select>
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
+    </select>-->
+
+<script src="/js/o.js"></script>
+<script src="/js/storage.js"></script>
+<script src="/js/wls.js"></script>
+<script src="/js/tabs.js"></script>
+<script src="/js/logs.js"></script>
+<script src="/js/settings.js"></script>
+<script src="/js/wordlists.js"></script>
+<script src="/js/exploitSearch.js"></script>
+
+<script src="/js/colors.js"></script>
+<script src="/js/attacks/AttackHelper.js"></script>
+<script src="/js/attacks/http.js"></script>
+<script src="/js/attacks/Logger.js"></script>
+
+</body>
+</html>

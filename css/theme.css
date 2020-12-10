@@ -1,0 +1,20 @@
+body { 
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center; 
+	background-color:000000;
+	color:ffffff;
+}
+
+.long {
+	width: 1000px;
+	height: 40.px;
+}
+ 
+.visible {
+	visibility: visible;
+}
+
+.invisible {
+	visibility: hidden;
+}
