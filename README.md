@@ -18,6 +18,7 @@ clone the repo and load unpacked
 == usage ==
 
 Right Click          Action
+
 Extensions icon for more features
 
 
