@@ -9,13 +9,16 @@ The web hacking chrome extension
 GPL v3
 
 
+== install == 
+
+(...) button -> more tools -> Extensions -> developer mode on -> load unpacked
+
+clone the repo and load unpacked
+
 == usage ==
 
 Right Click          Action
-
-input			load n wordlist
-url				load 1 wordlist
-otro			select attack
+Extensions icon for more features
 
 
 == pros ==
