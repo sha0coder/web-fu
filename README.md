@@ -1,6 +1,9 @@
 # web-fu
 The web hacking chrome extension
 
+![Web-Fu](img/nuke_128.png)
+
+
 == license == 
 
 GPL v3
