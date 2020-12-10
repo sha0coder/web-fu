@@ -57,6 +57,7 @@ Extensions icon for more features
 
 == components ==
 
+<pre>
 Bar-Button -> main.html ->  main.js -> settings.html -> settings.js
                                 |                           |
                                 |                           |
@@ -72,3 +73,4 @@ Background -+--> menu.js        |                           |
                        V
                    WORDLISTS
 
+</pre>
