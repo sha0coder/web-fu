@@ -40,6 +40,7 @@ Extensions icon for more features
 
 == features ==
 - bruteforcing folders, files, params names, param values on get/post.
+- false positive reduction with gauss
 - default wordlists or load worlist
 - cookie editor
 - notes
